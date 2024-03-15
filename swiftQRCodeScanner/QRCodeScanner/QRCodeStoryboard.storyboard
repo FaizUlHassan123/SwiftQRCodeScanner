@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Metropolis-Regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Code Scanner Controller-->
+        <scene sceneID="uTy-PT-K9p">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeScannerController" id="XOm-0U-3rz" customClass="QRCodeScannerController" customModule="swiftQRCodeScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tcJ-67-49f">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MS-I2-ufe">
+                                <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.55034234550000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9yr-CB-Q48"/>
+                                    <constraint firstAttribute="height" constant="300" id="fiT-wJ-VOS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-fi-C4H" customClass="SquareView" customModule="swiftQRCodeScanner" customModuleProvider="target">
+                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NFV-w1-A9C"/>
+                                    <constraint firstAttribute="height" constant="200" id="wPx-NA-Dfp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiF-Ob-qMh">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRLogin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZS-XP-kWo">
+                                        <rect key="frame" x="164" y="63" width="65" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW8-wU-lXW">
+                                        <rect key="frame" x="16" y="62.666666666666657" width="30" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Fw5-7y-70u"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="backArrow2"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1647058824" green="0.49019607840000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NW8-wU-lXW" firstAttribute="leading" secondItem="TiF-Ob-qMh" secondAttribute="leading" constant="16" id="6K9-pn-hWk"/>
+                                    <constraint firstItem="SZS-XP-kWo" firstAttribute="centerX" secondItem="TiF-Ob-qMh" secondAttribute="centerX" id="8aH-h4-s04"/>
+                                    <constraint firstItem="NW8-wU-lXW" firstAttribute="centerY" secondItem="SZS-XP-kWo" secondAttribute="centerY" id="DxB-lg-WlS"/>
+                                    <constraint firstAttribute="bottom" secondItem="SZS-XP-kWo" secondAttribute="bottom" constant="16" id="IHt-bf-HNS"/>
+                                    <constraint firstAttribute="height" constant="100" id="iJO-ZJ-oGM"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Align QR code within frame to scan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI9-UF-1Wt">
+                                <rect key="frame" x="20" y="116" width="353" height="18.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uvx-I6-Dfm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2MS-I2-ufe" firstAttribute="centerX" secondItem="tcJ-67-49f" secondAttribute="centerX" id="KCU-L1-xtJ"/>
+                            <constraint firstItem="cxa-fi-C4H" firstAttribute="centerY" secondItem="tcJ-67-49f" secondAttribute="centerY" id="Op8-dx-N37"/>
+                            <constraint firstItem="TiF-Ob-qMh" firstAttribute="top" secondItem="tcJ-67-49f" secondAttribute="top" id="POD-nk-vFj"/>
+                            <constraint firstItem="JI9-UF-1Wt" firstAttribute="top" secondItem="TiF-Ob-qMh" secondAttribute="bottom" constant="16" id="PgP-tT-qrk"/>
+                            <constraint firstItem="TiF-Ob-qMh" firstAttribute="leading" secondItem="tcJ-67-49f" secondAttribute="leading" id="RUr-8s-id4"/>
+                            <constraint firstItem="Uvx-I6-Dfm" firstAttribute="trailing" secondItem="TiF-Ob-qMh" secondAttribute="trailing" id="YRW-yZ-mcc"/>
+                            <constraint firstItem="JI9-UF-1Wt" firstAttribute="leading" secondItem="Uvx-I6-Dfm" secondAttribute="leading" constant="20" id="aeV-bA-ROW"/>
+                            <constraint firstItem="Uvx-I6-Dfm" firstAttribute="trailing" secondItem="JI9-UF-1Wt" secondAttribute="trailing" constant="20" id="gG1-bb-AOl"/>
+                            <constraint firstItem="cxa-fi-C4H" firstAttribute="centerX" secondItem="tcJ-67-49f" secondAttribute="centerX" id="m6o-ZI-qd0"/>
+                            <constraint firstItem="2MS-I2-ufe" firstAttribute="centerY" secondItem="tcJ-67-49f" secondAttribute="centerY" id="w2I-5E-R2C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="squareView" destination="cxa-fi-C4H" id="3Wf-A3-TXZ"/>
+                        <outlet property="videoPreviewLayerview" destination="2MS-I2-ufe" id="KQW-jA-WVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e00-Q3-D2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595.6521739130435" y="48.883928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backArrow2" width="16.333333969116211" height="14"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
