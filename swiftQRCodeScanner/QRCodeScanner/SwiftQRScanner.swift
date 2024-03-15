@@ -67,6 +67,10 @@ public class QRCodeScannerController: UIViewController, AVCaptureMetadataOutputO
         startScanningQRCode()
     }
 
+    @IBAction func  backButtonPOressed(_ sender :UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
+
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
